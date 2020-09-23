@@ -1,3 +1,4 @@
+
 // Create Tamagotchi Class
     // create sub classes for each tamagotchi
 
@@ -5,15 +6,19 @@
 
 // Create Button Class
 
-// Start Button Function
-    // When clicked promt asks you to name your pet, and gives instructions on how to play the game.
-
 // Prompt Function
-    // After naming pet, press OK to start game.
-        // Name populates into the text box.
-    // When clicked time begins to decrement
-    // When clicked age begins to increment 
-    // When clicked meters begin to increment
+    // When clicked prompt asks you to name your pet.
+    // The prompt inputs name into text box.
+
+// Start Button Function
+    // When clicked game begins:
+        // time begins to decrement
+        // age begins to increment 
+        // meters begin to increment
+
+// Timer function
+    // set initial time
+    // associate increment to milliseconds
 
 // Tamagotchi Functions
     // after 20 seconds, hatch egg
@@ -38,8 +43,83 @@
     // Exercise Time button decrements bordom meter by .1 with every click
     // Sleepy Time button decrements sleepy meter by 3 with every click
 
+
+//------------------------ Create Classes -----------------------
     class Tamagotchi {
         constructor() {
-            
+
         }
+    };
+
+    class Meter {
+        constructor() {
+
+        }
+    };
+
+    class Button {
+        constructor() {
+
+        }
+    };
+
+//-------------------------- Prompt Function -------------------
+   
+        // The prompt inputs value into text box.
+    
+    let timer = 0;
+    let age = 0;
+    let $prompt = prompt('Please Name Your Pet','Pet Name:');
+    
+    if ($prompt != null) {
+        $('.name').val($prompt);
     }
+   
+//-------------------------Timer Function------------------------
+// timer count up starting at zero increment by 1000 ms
+const timeStart = function() {
+    const count = setInterval(function() {
+        timer++;
+        $('#time').text(`Timer: ${timer}s`);
+        ageFunc();
+    },1000);
+    return count;
+    
+}
+//------------------------Age Function-----------------------
+// Write age function in a variable
+// Age increases by 
+const ageFunc = function() {
+    // increment age by 1 year after 20 seconds
+    if (age === 0 &&  timer === 20) {
+            age++
+    }
+    // increment age by 1 year every 60 seconds
+
+    
+    $('.age').text(`Age: ${age}yrs`);
+};
+//------------------------Hungry Function----------------------
+
+const hungry = function() {
+
+}
+//------------------------Bordom Function----------------------
+
+const bordom = function() {
+
+}
+//------------------------Sleepy Function----------------------
+
+const sleepy = function() {
+
+}
+
+//-------------------------- Start Button ----------------------
+// use on click to initiate clock, age, and meters
+
+$('.start').on('click', function() {
+    timeStart();
+    
+});
+

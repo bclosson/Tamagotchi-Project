@@ -34,6 +34,7 @@ header {
 }
 
 .start {
+    background: rgba(9, 225, 9, 0.858);
     height: 50px;
     width: 125px;
     margin: 5px;
@@ -41,6 +42,10 @@ header {
 }
 
 .name {
+    font-size: 10px;
+    text-align: center;
+    color: yellow;
+    background: rgb(216, 43, 153);
     height: 50px;
     width: 200px;
     margin: 5px;
