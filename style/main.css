@@ -70,7 +70,7 @@ header {
 
 #yoshi {
    border-radius: 50%;
-   height: 60px; 
+   height: 50px; 
    margin: 5px;
 }
 
@@ -102,39 +102,70 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
+    justify-content: left;
     width: 100%;
 }
 
-.hunger {
-    font-size: 20px;
-    text-align: center;
-    height: 40px;
+.meter-hungry {
+    display: flex;
+    justify-content: left;
+    background: grey;
+    height: 25%;
     width: 30%;
     line-height: 40px;
+    margin: 5px;
+    border-radius: 15%;
+}
+
+.hunger {
+    font-size: 15px;
+    text-align: center;
+    height: 100%;
+    width: 0px;
+    line-height: 100%;
     background: rgba(13, 46, 232, 0.687);
+    border-radius: 15%;
+}
+
+.meter-bord {
+    display: flex;
+    justify-content: left;
+    background: grey;
+    height: 25%;
+    width: 30%;
+    line-height: 40px;
     margin: 5px;
     border-radius: 15%;
 }
 
 .bordom {
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
-    height: 40px;
-    width: 30%;
-    line-height: 40px;
+    height: 100%;
+    width:0%;
+    line-height: 100%;
     background: rgba(13, 46, 232, 0.687);
-    margin: 5px;
     border-radius: 15%;
 }
-
-.sleepy {
-    font-size: 20px;
-    text-align: center;
-    height: 40px;
+ 
+.meter-sleep {
+    display: flex;
+    justify-content: left;
+    background: grey;
+    height: 25%;
     width: 30%;
     line-height: 40px;
-    background: rgba(13, 46, 232, 0.687);
     margin: 5px;
+    border-radius: 15%;
+} 
+
+.sleepy {
+    font-size: 15px;
+    text-align: center;
+    height: 100%;
+    width: 0%;
+    line-height: 100%;
+    background: rgba(13, 46, 232, 0.687);
     border-radius: 15%;
 }
 
