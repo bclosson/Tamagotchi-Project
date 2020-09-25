@@ -43,18 +43,21 @@
     // Alert: "You have neglected "pet name" and they have DIED!!!"
  //---------------------- Global Variables -----------------------
        
- let timer = 0;
- let age = 0; 
+let timer = 0;
 const tamArray = []
 
 //------------------------ Create Classes -----------------------
     class Tamagotchi {
         constructor() {
-            this.fade = fade();
+            this.hunger = 0;
+            this.bored = 0;
+            this.sleepy = 0;
+            this.age = 0;
         }
-
+       
     };
 
+    const yoshi = new Tamagotchi();
 
 
 //-------------------------- Prompt Function -------------------
@@ -78,6 +81,7 @@ const timeStart = function() {
         sleepyFunc();
         fadeFunc();
         sunsetFunc();
+        // loserFunc();
     },1000);
     return count;
 };
@@ -88,34 +92,38 @@ const timeStart = function() {
 
 const ageFunc = function() {
 // increment age by 1 year after 20 seconds
-    if (age === 0 &&  timer === 20) {
-            age++
+    if (yoshi.age === 0 &&  timer === 20) {
+            yoshi.age++
 // increment age by 1 year every 60 seconds  
-    } if (age > 0 && timer % 60 === 0) {
-        age++
+    } if (yoshi.age > 0 && timer % 60 === 0) {
+        yoshi.age++
     }
-    $('.age').text(`Age: ${age}yrs`);
+    $('.age').text(`Age: ${yoshi.age}yrs`);
 };
 
 //------------------------Hungry Function----------------------
 // Hungry Meter bar increments plus six every two seconds
 
 const hungryFunc = function() {
-    let $hungry = $('.hunger').css('width', '+=6%');
-    if (timer % 2 === 0 && $hungry < '100%') {
-      $hungry++
-    }if (timer >= '100%'){
-    alert('SHAME ON YOU!  You Have Killed Your Pet!');
-    }
+//    console.log(yoshi.hunger);
+   if (yoshi.hunger < 60) {
+       yoshi.hunger++
+       $('.hunger').css('width', '+=6')
+   }else {
+    alert('YOU HAVE KILLED YOUR PET!!  SHAME ON YOU!!');
+}
 };
 
 //------------------------Bordom Function----------------------
 // Bordom Meter bar increments plus five every three seconds
 
 const bordomFunc = function() {
-    let $bored = $('.bordom').css('width', '+=5%');
-    if (timer % 3 === 0 && $bored < '100%') {
-        $bored++
+//    console.log(yoshi.bored);
+    if (yoshi.bored < 60) {
+        yoshi.bored++
+        $('.bordom').css('width', '+=5');
+    } else {
+        alert('YOU HAVE KILLED YOUR PET!!  SHAME ON YOU!!');
     }
 };
 
@@ -123,9 +131,12 @@ const bordomFunc = function() {
 // Sleepy Meter bar increments plus 3 every 3 seconds
 
 const sleepyFunc = function() {
-    let $sleepy = $('.sleepy').css('width', '+=3%');
-    if (timer % 3 === 0 && $sleepy < '100%') {
-        $sleepy++
+    // console.log(yoshi.sleepy);
+    if (yoshi.sleepy < 60) {
+        yoshi.sleepy++
+        $('.sleepy').css('width', '+=3');
+    } else {
+        alert('YOU HAVE KILLED YOUR PET!!  SHAME ON YOU!!');
     }
 };
 
@@ -163,13 +174,24 @@ const sleepT = $('.sleep').on('click', function() {
 const fadeFunc = function() {
     if (timer >= 20) {
         $('#egg').css('opacity', 0);
-    }if (timer >= 60) {
+    }if (timer > 20 && timer <= 60) {
+        $('#baby').css('opacity', 1);
+    }else {
         $('#baby').css('opacity', 0);
-    }if (timer >= 120) {
+    }
+    if (timer > 60 && timer <= 120) {
+        $('#kid').css('opacity', 1); 
+    }else{
         $('#kid').css('opacity', 0); 
-    }if (timer >= 180) {
+    }
+    if (timer >= 120 && timer <= 180) {
+        $('#adult').css('opacity', 1);
+    }else {
         $('#adult').css('opacity', 0);
-    }if (timer > 240) {
+    }
+    if (timer > 180 ) {
+        $('#old').css('opacity', 1);
+    }else {
         $('#old').css('opacity', 0);
     }
 };
