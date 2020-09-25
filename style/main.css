@@ -78,7 +78,6 @@ header {
     flex-direction: row;
     justify-content: center;
     position: relative;
-    height: 75px;
     width: 100%;
 }
 
@@ -107,19 +106,18 @@ header {
     display: flex;
     justify-content: left;
     background: grey;
-    height: 25%;
+    height: 30px;
     width: 30%;
-    line-height: 40px;
+    line-height: 30px;
     margin: 5px;
     border-radius: 15%;
 }
 
 .hunger {
     font-size: 15px;
-    text-align: center;
+    text-align: match-parent;
     height: 100%;
     width: 0px;
-    line-height: 100%;
     background: rgba(13, 46, 232, 0.687);
     border-radius: 15%;
 }
@@ -128,19 +126,18 @@ header {
     display: flex;
     justify-content: left;
     background: grey;
-    height: 25%;
+    height: 30px;
     width: 30%;
-    line-height: 40px;
+    line-height: 30px;
     margin: 5px;
     border-radius: 15%;
 }
 
 .bordom {
     font-size: 15px;
-    text-align: center;
+    text-align: match-parent;
     height: 100%;
-    width:0%;
-    line-height: 100%;
+    width: 0px;
     background: rgba(13, 46, 232, 0.687);
     border-radius: 15%;
 }
@@ -149,19 +146,18 @@ header {
     display: flex;
     justify-content: left;
     background: grey;
-    height: 25%;
+    height: 30px;
     width: 30%;
-    line-height: 40px;
+    line-height: 30px;
     margin: 5px;
     border-radius: 15%;
 } 
 
 .sleepy {
     font-size: 15px;
-    text-align: center;
+    text-align: match-parent;
     height: 100%;
-    width: 0%;
-    line-height: 100%;
+    width: 0px;
     background: rgba(13, 46, 232, 0.687);
     border-radius: 15%;
 }
@@ -206,6 +202,7 @@ header {
 }
 
 #egg {
+    border: none;
     border-radius: 50%;
     height: 150px;
     position: absolute;

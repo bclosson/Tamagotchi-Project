@@ -176,7 +176,7 @@ const fadeFunc = function() {
 
 //--------------------- Sunset Function ------------------------
    // change background from sun to sunset when timer reads 239
-   
+
 const sunsetFunc = function() {
         if (timer > 239) {
         let $sunset = $('body').css('background-image', 'url("/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel mountain sunset.jpeg")');
