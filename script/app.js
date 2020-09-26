@@ -41,13 +41,9 @@
 // End Of Game Function
     // when any of the three meters reach 100% your Tamagochi dies and you lose the game
     // Alert: "You have neglected "pet name" and they have DIED!!!"
- //---------------------- Global Variables -----------------------
-let hWidth = $('.hunger').width(); 
-let bWidth = $('.bordom').width(); 
-let sWidth = $('.sleepy').width();    
+ //---------------------- Global Variables ---------------------   
 let timer = 0;
-const tamArray = []
-
+let count = 0;
 //------------------------ Create Classes -----------------------
     class Tamagotchi {
         constructor() {
@@ -74,7 +70,7 @@ let $prompt = prompt('Please Name Your Pet','Pet Name:');
 // timer count up starting at zero increment by 1000 ms
 
 const timeStart = function() {
-    const count = setInterval(function() {
+    count = setInterval(function() {
         timer++;
         $('#time').text(`Timer: ${timer}s`);
         ageFunc();
@@ -85,6 +81,7 @@ const timeStart = function() {
         sunsetFunc();
         // loserFunc();
     },1000);
+    
     return count;
 };
 
@@ -108,11 +105,11 @@ const ageFunc = function() {
 
 const hungryFunc = function() {
 //    console.log(yoshi.hunger);
-    yoshi.hunger = hWidth;
-        if (hWidth < 257) {
+        if (yoshi.hunger < 51.4) {
             yoshi.hunger++
             $('.hunger').css('width', '+=5px');
         }else {
+            clearInterval(count);
         alert('YOU HAVE KILLED YOUR PET!!  SHAME ON YOU!!');
         }
 };
@@ -122,10 +119,11 @@ const hungryFunc = function() {
 
 const bordomFunc = function() {
 //    console.log(yoshi.bored);
-    if (bWidth < 257) {
+    if (yoshi.bored < 64.25) {
         yoshi.bored++
         $('.bordom').css('width', '+=4px');
     } else {
+        clearInterval(count);
         alert('YOU HAVE KILLED YOUR PET!!  SHAME ON YOU!!');
     }
 };
@@ -135,10 +133,11 @@ const bordomFunc = function() {
 
 const sleepyFunc = function() {
     // console.log(yoshi.sleepy);
-    if (sWidth <257) {
+    if (yoshi.sleepy < 85.67) {
         yoshi.sleepy++
         $('.sleepy').css('width', '+=3px');
     } else {
+        clearInterval(count);
         alert('YOU HAVE KILLED YOUR PET!!  SHAME ON YOU!!');
     }
 };
@@ -154,13 +153,15 @@ $('.start').on('click', function() {
 // Munchy Time button decrements hungry meter by 3% with every click.
 
 const munchyT = $('.feed').on('click', function() {
-    $('.hunger').css('width', '-=3%');
+    yoshi.hunger--
+    $('.hunger').css('width', '-=7.72px');
 });
 
 //-------------------------- Exercise Time Button ---------------
 // Exercise Time button decrements bordom meter by 5% with every click
 
 const exerciseT = $('.exercise').on('click', function() {
+    yoshi.bored--
     $('.bordom').css('width', '-=5%');
 });
 
@@ -168,7 +169,9 @@ const exerciseT = $('.exercise').on('click', function() {
  // Sleepy Time button decrements sleepy meter by 3 with every click
 
 const sleepT = $('.sleep').on('click', function() {
+    yoshi.sleepy--
     $('.sleepy').css('width', '-=6%');
+    $('body').css('background', "rgba(40, 60, 85, 0.26)", "url('/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel grass mountains.jpeg')");
 })
 
 //-------------------- Tamagotchi Fade Out Function -------------
@@ -209,5 +212,4 @@ const sunsetFunc = function() {
         }
      };
 
-//--------------------- Lose Function --------------------------
 
