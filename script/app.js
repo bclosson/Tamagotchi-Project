@@ -42,7 +42,9 @@
     // when any of the three meters reach 100% your Tamagochi dies and you lose the game
     // Alert: "You have neglected "pet name" and they have DIED!!!"
  //---------------------- Global Variables -----------------------
-       
+let hWidth = $('.hunger').width(); 
+let bWidth = $('.bordom').width(); 
+let sWidth = $('.sleepy').width();    
 let timer = 0;
 const tamArray = []
 
@@ -106,12 +108,13 @@ const ageFunc = function() {
 
 const hungryFunc = function() {
 //    console.log(yoshi.hunger);
-   if (yoshi.hunger < 60) {
-       yoshi.hunger++
-       $('.hunger').css('width', '+=6')
-   }else {
-    alert('YOU HAVE KILLED YOUR PET!!  SHAME ON YOU!!');
-}
+    yoshi.hunger = hWidth;
+        if (hWidth < 257) {
+            yoshi.hunger++
+            $('.hunger').css('width', '+=5px');
+        }else {
+        alert('YOU HAVE KILLED YOUR PET!!  SHAME ON YOU!!');
+        }
 };
 
 //------------------------Bordom Function----------------------
@@ -119,9 +122,9 @@ const hungryFunc = function() {
 
 const bordomFunc = function() {
 //    console.log(yoshi.bored);
-    if (yoshi.bored < 60) {
+    if (bWidth < 257) {
         yoshi.bored++
-        $('.bordom').css('width', '+=5');
+        $('.bordom').css('width', '+=4px');
     } else {
         alert('YOU HAVE KILLED YOUR PET!!  SHAME ON YOU!!');
     }
@@ -132,9 +135,9 @@ const bordomFunc = function() {
 
 const sleepyFunc = function() {
     // console.log(yoshi.sleepy);
-    if (yoshi.sleepy < 60) {
+    if (sWidth <257) {
         yoshi.sleepy++
-        $('.sleepy').css('width', '+=3');
+        $('.sleepy').css('width', '+=3px');
     } else {
         alert('YOU HAVE KILLED YOUR PET!!  SHAME ON YOU!!');
     }
