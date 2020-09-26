@@ -166,14 +166,20 @@ const exerciseT = $('.exercise').on('click', function() {
 });
 
 //-------------------------- Sleepy Time Button -----------------
- // Sleepy Time button decrements sleepy meter by 3 with every click
+ // Sleepy Time button decrements sleepy meter by 3 with every click only when lights are out
 
 const sleepT = $('.sleep').on('click', function() {
     yoshi.sleepy--
     $('.sleepy').css('width', '-=6%');
     $('body').css('background', "rgba(40, 60, 85, 0.26)", "url('/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel grass mountains.jpeg')");
-})
+});
 
+//-------------------------- Lights Button -----------------
+// Lights button changes background to night time on click and back to daytime on second click
+
+const lights = $('.lights').on('click', function() {
+    
+});
 //-------------------- Tamagotchi Fade Out Function -------------
 // characters fade out as thier age increases
 
