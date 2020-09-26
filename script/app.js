@@ -44,6 +44,9 @@
  //---------------------- Global Variables ---------------------   
 let timer = 0;
 let count = 0;
+// let $background = $('body').css('background-image');
+// const $night = $('body').css('background-image', 'url("/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel mountain night.jpg")');
+// const $day = $('body').css('background-image', 'url("/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel grass mountains.jpeg")');
 //------------------------ Create Classes -----------------------
     class Tamagotchi {
         constructor() {
@@ -171,14 +174,21 @@ const exerciseT = $('.exercise').on('click', function() {
 const sleepT = $('.sleep').on('click', function() {
     yoshi.sleepy--
     $('.sleepy').css('width', '-=6%');
-    $('body').css('background', "rgba(40, 60, 85, 0.26)", "url('/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel grass mountains.jpeg')");
 });
 
 //-------------------------- Lights Button -----------------
 // Lights button changes background to night time on click and back to daytime on second click
+ $(function() {
+    let backgroundIsDay = true;
 
-const lights = $('.lights').on('click', function() {
-    
+    const lights = $('.lights').on('click', function() {
+        if (backgroundIsDay) {
+            $('body').css('background-image', 'url("/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel mountain night.jpg")');
+        } else {
+            $('body').css('background-image', 'url("/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel grass mountains.jpeg")');
+        }
+        backgroundIsDay = !backgroundIsDay;
+    });
 });
 //-------------------- Tamagotchi Fade Out Function -------------
 // characters fade out as thier age increases
