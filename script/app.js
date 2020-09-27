@@ -154,23 +154,23 @@ $('.start').on('click', function() {
 // Munchy Time button decrements hungry meter by 3px with every click.
 
 const munchyT = $('.feed').on('click', function() {
-    yoshi.hunger -= 3;
-    $('.hunger').css('width', '-=3px');
+    yoshi.hunger -= 1;
+    $('.hunger').css('width', '-=5px');
 });
 
 //-------------------------- Exercise Time Button ---------------
 // Exercise Time button decrements bordom meter by 5px with every click
 
 const exerciseT = $('.exercise').on('click', function() {
-    yoshi.bored -= 5;
-    $('.bordom').css('width', '-=5px');
+    yoshi.bored -= 1;
+    $('.bordom').css('width', '-=4px');
 });
 
 //-------------------------- Sleepy Time Button -----------------
  // Sleepy Time button decrements sleepy meter by 3px with every click only when lights are out
 
 const sleepT = $('.sleep').on('click', function() {
-    yoshi.sleepy -= 6;
+    yoshi.sleepy -= 2;
     $('.sleepy').css('width', '-=6px');
 });
 
