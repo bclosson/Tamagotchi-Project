@@ -178,6 +178,9 @@ const sleepT = $('.sleep').on('click', function() {
 // I found resources on Stack Overflow to create this functionality
 
 // Lights button changes background to night time on click and back to daytime on second click
+
+// ** ADD FUNCTION TO ONCLICK THAT STOPS AND STARTS INTERVAL FUNCTION
+
  $(function() {
     let isDay = true;
 
@@ -222,7 +225,7 @@ const fadeFunc = function() {
    // change background from sun to sunset when timer reads 239
 
 const sunsetFunc = function() {
-        if (timer > 239) {
+        if (timer > 225) {
         let $sunset = $('body').css('background-image', 'url("/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel mountain sunset.jpeg")');
         $sunset;
         } 
