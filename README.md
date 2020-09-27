@@ -10,19 +10,17 @@ You will begin your parenting adventure by clicking the "play game" button.  At 
 
 When you pet hatches it will appear as a baby.  You will be responsible for: 
 - feeding your pet as it's hunger level increases
-- making sure your pet gets plenty of exercise as it's bordom 
-    increases.
-- Making sure your pet gets enough sleep as it's sleepiness
-    increases. 
+- making sure your pet gets plenty of exercise as it's bordom increases.
+- Making sure your pet gets enough sleep as it's sleepiness increases. 
 
-Be Careful!  If any of your pet's hunger, bordom, or sleepiness reach level 10 then your pet will DIE!! 
+Be Careful!  If any of your pet's hunger, bordom, or sleepiness meters fill up then your pet will DIE!! 
 
 Your Job is to care for your pet through it's entire life cycle, and send it off into the night with care and love.
 
 ## Wireframes
 
-![hatching_page](./images/img_1725.jpg)
-![game_page](./images/img_1726.jpg) 
+![Page Layout](/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/IMG_1730.jpg)
+
 
 ### Milestones
 
