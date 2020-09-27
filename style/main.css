@@ -39,7 +39,7 @@ header {
 }
 
 .name {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     color: yellow;
     background: rgb(216, 43, 153);
@@ -194,6 +194,20 @@ header {
     width: 150px;
     position: absolute;
     opacity: 0;
+    animation: old 60s;
+}
+
+@keyframes old {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-100px);
+        transform: scale(.1);
+    }
 }
 
 #adult {
@@ -201,6 +215,46 @@ header {
     height: 150px;
     position: absolute;
     opacity: 0;
+    animation: adult 6s 6s infinite;
+}
+
+@keyframes adult {
+    0%, 100%{
+        transform: translate(0px, 0px);
+    }
+    5% {
+        transform: translate(-25px, 10px);
+    }
+    15% {
+        transform: translate(-50px, -10px);
+    }
+    25% {
+        transform: translate(-100px, 10px);
+    }
+    40% {
+        transform: translate(-50px, -10px);
+    }
+    50% {
+        transform: translate(-25px, 10px);
+    }
+    55% {
+        transform: translate(0px, 0px);
+    }
+    60% {
+        transform: translate(25px, -10px);
+    }
+    75% {
+        transform: translate(50px, 10px);
+    }
+    85% {
+        transform: translate(100px, -10px);
+    }
+    95% {
+        transform: translate(50px, 10px);
+    }
+    100% {
+        transform: translate(25px, -10px);
+    }
 }
 
 #kid {
@@ -208,6 +262,46 @@ header {
     height: 150px;
     position: absolute;
     opacity: 0;
+    animation: kid 6s 6s infinite;
+}
+
+@keyframes kid {
+    0%, 100%{
+        transform: translate(0px, 0px);
+    }
+    5% {
+        transform: translate(-25px, 10px);
+    }
+    15% {
+        transform: translate(-50px, -10px);
+    }
+    25% {
+        transform: translate(-100px, 10px);
+    }
+    40% {
+        transform: translate(-50px, -10px);
+    }
+    50% {
+        transform: translate(-25px, 10px);
+    }
+    55% {
+        transform: translate(0px, 0px);
+    }
+    60% {
+        transform: translate(25px, -10px);
+    }
+    75% {
+        transform: translate(50px, 10px);
+    }
+    85% {
+        transform: translate(100px, -10px);
+    }
+    95% {
+        transform: translate(50px, 10px);
+    }
+    100% {
+        transform: translate(25px, -10px);
+    }
 }
 
 #baby {
@@ -215,36 +309,45 @@ header {
     height: 150px;
     position: absolute;
     opacity: 0;
-    animation: forward 6s 6s infinite;
+    animation: baby 6s 6s infinite;
 }
 
-@keyframes forward {
+@keyframes baby {
     0%, 100%{
         transform: translate(0px, 0px);
     }
-    20% {
-        transform: translate(-25px, 5px);
+    5% {
+        transform: translate(-25px, 10px);
     }
-    30% {
-        transform: traslate(-50px, -5px);
+    15% {
+        transform: translate(-50px, -10px);
+    }
+    25% {
+        transform: translate(-100px, 10px);
     }
     40% {
-        transform: translate(-100px, -5px);
+        transform: translate(-50px, -10px);
     }
     50% {
-        transform: translate(-50px, 5px);
+        transform: translate(-25px, 10px);
+    }
+    55% {
+        transform: translate(0px, 0px);
     }
     60% {
-        transform: translate(-25px, -5px);
+        transform: translate(25px, -10px);
     }
-    70% {
-        transform: translate(0px, 5px);
+    75% {
+        transform: translate(50px, 10px);
     }
-    80% {
-        transform: translate(0px, 10px);
+    85% {
+        transform: translate(100px, -10px);
     }
-    90% {
-        transform: translate(0px, 5px)
+    95% {
+        transform: translate(50px, 10px);
+    }
+    100% {
+        transform: translate(25px, -10px);
     }
 }
 
