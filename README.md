@@ -19,7 +19,7 @@ Your Job is to care for your pet through it's entire life cycle, and send it off
 
 ## Wireframes
 
-![Page Layout](/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/IMG_1730.jpg)
+![Page Layout](images/IMG_1730.jpg)
 
 
 ### Milestones
