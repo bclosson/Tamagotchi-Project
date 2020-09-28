@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel grass mountains.jpeg');
+    background-image: url("/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel grass mountains.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;

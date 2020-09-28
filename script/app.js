@@ -186,9 +186,9 @@ const sleepT = $('.sleep').on('click', function() {
 
     const lights = $('.lights').on('click', function() {
         if (isDay) {
-            $('body').css('background-image', 'url("/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel mountain night.jpg")');
+            $('body').css('background-image', 'url("images/pixel mountain night.jpg")');
         } else {
-            $('body').css('background-image', 'url("/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel grass mountains.jpeg")');
+            $('body').css('background-image', 'url("images/pixel grass mountains.jpeg")');
         }
         isDay = !isDay;
     });
@@ -226,7 +226,7 @@ const fadeFunc = function() {
 
 const sunsetFunc = function() {
         if (timer > 225) {
-        let $sunset = $('body').css('background-image', 'url("/Users/benjaminclosson/sei/deliverables/Tamagotchi-Project/images/pixel mountain sunset.jpeg")');
+        let $sunset = $('body').css('background-image', 'url("images/pixel mountain sunset.jpeg")');
         $sunset;
         } 
         if (timer >= 245) {
