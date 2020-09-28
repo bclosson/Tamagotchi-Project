@@ -36,6 +36,7 @@ header {
     width: 125px;
     margin: 5px;
     border-radius: 25%;
+    outline: none;
 }
 
 .name {
@@ -47,6 +48,7 @@ header {
     width: 125px;
     margin: 5px;
     border-radius: 25%; 
+    outline: none;
 }
 
 .age {
@@ -138,7 +140,7 @@ header {
     border-radius: 15%;
 }
 
-.meter-bord {
+.meter-bored {
     display: flex;
     justify-content: left;
     background: grey;
@@ -399,6 +401,7 @@ header {
     background: rgba(255, 105, 180, 0.755); 
     font-size: 8px; 
     border-radius: 45%;
+    outline: none;
     width: 75px;
     height: 100px;
     margin: 0 20px 0 20px;
@@ -410,6 +413,7 @@ header {
     background: rgba(252, 252, 82, 0.755);
     font-size: 8px;
     border-radius: 45%;
+    outline: none;
     width: 75px;
     height: 100px;
     margin: 0 20px 0 20px;
@@ -420,6 +424,7 @@ header {
     background: rgba(5, 210, 210, 0.755);
     font-size: 8px;
     border-radius: 45%;
+    outline: none;
     width: 75px;
     height: 100px;
     margin: 0 20px 0 20px;
@@ -430,6 +435,7 @@ header {
     background: rgba(158, 10, 232, 0.755);
     font-size: 8px;
     border-radius: 45%;
+    outline: none;
     width: 75px;
     height: 100px;
     margin: 0 20px 0 20px;

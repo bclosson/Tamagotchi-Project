@@ -48,3 +48,10 @@ Your Job is to care for your pet through it's entire life cycle, and send it off
 #### Technologies
 
 - HTML, CSS, JavaScript, jQuery, pixel art
+
+#### Unsolved Problems/Future Additions
+
+- Have the sleep button stop all game progress until your pet is refreshed.
+
+- Consolodate repetitive code and place in classes as methods(dry it up).
+
