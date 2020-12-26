@@ -42,7 +42,7 @@
 
  //---------------------- Global Variables ---------------------   
 
- let timer = 0;
+let timer = 0;
 let count = 0;
 
 //------------------------ Create Classes -----------------------
