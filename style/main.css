@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url("images/pixel grass mountains.jpeg");
+    background-image: url("../images/pixel\ grass\ mountains.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -120,6 +120,10 @@ header {
     width: 100%;
 }
 
+#hungry-title {
+    margin: 0 0 0 20px;
+}
+
 .meter-hungry {
     display: flex;
     justify-content: left;
@@ -138,6 +142,10 @@ header {
     width: 0px;
     background: rgba(13, 46, 232, 0.687);
     border-radius: 15%;
+}
+
+#bordom-title {
+    margin: 0 0 0 20px;
 }
 
 .meter-bored {
@@ -159,7 +167,11 @@ header {
     background: rgba(13, 46, 232, 0.687);
     border-radius: 15%;
 }
- 
+
+#sleepy-title {
+    margin: 0 0 0 20px;
+}
+
 .meter-sleep {
     display: flex;
     justify-content: left;
