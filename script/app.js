@@ -229,7 +229,7 @@ const sunsetFunc = function() {
         let $sunset = $('body').css('background-image', 'url("images/pixel mountain sunset.jpeg")');
         $sunset;
         } 
-        if (timer >= 245) {
+        if (timer >= 240) {
             alert("As your pet walks quietly into the night, know you have loved and care for them with all your heart.")
             clearInterval(count);
         }
