@@ -47,7 +47,7 @@ Your Job is to care for your pet through it's entire life cycle, and send it off
 
 #### Technologies
 
-- HTML, CSS, JavaScript, jQuery, lunapic photo editor
+- HTML, CSS, JavaScript, jQuery
 
 #### Unsolved Problems/Future Additions
 
